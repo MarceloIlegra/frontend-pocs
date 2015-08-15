@@ -1,0 +1,22 @@
+{
+  "name": "bower-project",
+  "version": "0.0.1",
+  "homepage": "https://github.com/MarceloIlegra/frontend-pocs",
+  "authors": [
+    "Marcelo <jdev.marcelo@gmail.com>"
+  ],
+  "description": "test install bower",
+  "main": "main.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}
