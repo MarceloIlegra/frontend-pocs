@@ -1,5 +1,8 @@
 var gulp = require('gulp');
+var stylus = require('gulp-stylus')
 
-gulp.task('default', function() {
-  console.log('my first task with gulp');
+gulp.task('stylus', function() {
+  gulp.src('src/styls/**/*.styl')
+      .pipe(stylus())
+      .pipe(gulp.dest('./assets/css/'))
 });
