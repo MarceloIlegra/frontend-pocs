@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var stylus = require('gulp-stylus')
 var concat = require('gulp-concat');
+var minifyCss = require('gulp-minify-css')
+var rename = require('gulp-rename')
 
 gulp.task('stylus', function() {
   gulp.src('src/styls/**/*.styl')
@@ -11,5 +13,12 @@ gulp.task('stylus', function() {
 gulp.task('combine', function(){
   return gulp.src('./assets/css/**/*.css')
       .pipe(concat('all.css'))
+      .pipe(gulp.dest('./compressed/'));
+})
+
+gulp.task('min', function(){
+  return gulp.src('./compressed/all.css')
+      .pipe(minifyCss())
+      .pipe(rename('all.min.css'))
       .pipe(gulp.dest('./compressed/'));
 })
