@@ -3,6 +3,7 @@ var stylus = require('gulp-stylus')
 var concat = require('gulp-concat');
 var minifyCss = require('gulp-minify-css')
 var rename = require('gulp-rename')
+var gulpSync = require('gulp-sync') (gulp)
 
 gulp.task('stylus', function() {
   gulp.src('src/styls/**/*.styl')
@@ -22,3 +23,5 @@ gulp.task('min', function(){
       .pipe(rename('all.min.css'))
       .pipe(gulp.dest('./compressed/'));
 })
+
+gulp.task('default', gulpSync.sync(['stylus', 'combine' , 'min']))
