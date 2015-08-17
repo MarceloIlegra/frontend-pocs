@@ -6,7 +6,7 @@ module.exports = function( grunt ) {
 		        separator: '\n;'
 		    },
 		    dist: {
-		        src: ['assets/_js/scripts.js', 'assets/_js/scripts_1.js', 'assets/_js/scripts_2.js'],
+		        src: ['assets/_js/*.js'],
 		        dest: 'assets/js/app.js'
 		    }
  		},
@@ -27,12 +27,12 @@ module.exports = function( grunt ) {
 	          		compress : false
 	        	},
 	        	files: {
-	          		'assets/css/app.css': ['assets/_css/styles.styl', 'assets/_css/styles_1.styl', 'assets/_css/styles_2.styl']
+	          		'assets/css/app.css': ['assets/_css/*.styl']
 	        	}
 	      	},
 	      	prod: {
 	        	files: {
-	          		'assets/css/app.min.css': ['assets/_css/styles.styl', 'assets/_css/styles_1.styl', 'assets/_css/styles_2.styl']
+	          		'assets/css/app.min.css': ['assets/_css/*.styl']
 	        	}
 	      	}
 	    }
