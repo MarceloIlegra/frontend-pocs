@@ -5,21 +5,13 @@
 		<title>Title of the document</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+		<script src="components/helloworld.jsx" type="text/jsx"></script>		
 		<script type="text/jsx">
-			var MyComponent = React.createClass({
-			    render: function(){
-			        return (
-			            <h1>Hello, world!</h1>
-			        );
-			    }
-			});
-			React.render(<MyComponent />, document.getElementById("divtest"));
+			React.render(<MyComponent />, document.getElementById("divtest"))
 		</script>
 	</head>
 
 	<body>
 		<div id="divtest"></div>
-		
-
 	</body>
 </html>
