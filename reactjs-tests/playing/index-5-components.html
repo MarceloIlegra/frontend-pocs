@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Title of the document</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+		<style>
+			MessageComponent{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="message"></div>
+		<script type="text/jsx">
+			var MessageComponent = React.createClass({
+				getInitialState: function() {
+					return {like : false};
+				},
+				handleClick: function(){
+					this.setState({like : !this.state.like})
+				},
+				render: function(){
+					var divStyle = {
+						border: "1px solid #000",
+						width: "600px",
+						margin: "10px",
+						padding: "0 0 15px 15px"
+					};
+					return (
+						<div style={divStyle}>
+							<h2>{this.props.author}</h2>
+							<p>{this.props.children}</p>
+							<a onClick={this.handleClick} href="#">
+								{this.state.like ? "Unlike" : "Like"}
+							</a>						
+						</div>
+					)
+				}
+			});
+
+			var MessageBox = React.createClass({
+				render: function(){
+					return(
+						<div>
+							<MessageComponent author="Marcelo">Primeira mensagem!</MessageComponent>
+							<MessageComponent author="Marcelo">Segunda mensagem!</MessageComponent>
+						</div>
+					)
+				}
+			});
+
+			React.render(<MessageBox />, document.getElementById("message"));
+		</script>
+	</body>
+</html>

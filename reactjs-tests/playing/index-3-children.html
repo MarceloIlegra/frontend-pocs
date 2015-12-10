@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Title of the document</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+	</head>
+	<body>
+		<div id="message"></div>
+		<script type="text/jsx">
+			var MessageComponent = React.createClass({
+				render: function(){
+					return (
+						<div>
+							<h2>{this.props.author}</h2>
+							<p>{this.props.children}</p>						
+						</div>
+					)
+				}
+			});
+			React.render(
+				<MessageComponent author="Marcelo">Minha primeira mensagem!</MessageComponent>, 
+				document.getElementById("message")
+			);
+		</script>
+	</body>
+</html>
