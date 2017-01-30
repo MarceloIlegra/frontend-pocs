@@ -1,0 +1,16 @@
+{
+  "name": "first-app",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron-localshortcut": "^1.0.0",
+    "electron-prebuilt": "^1.4.13"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
